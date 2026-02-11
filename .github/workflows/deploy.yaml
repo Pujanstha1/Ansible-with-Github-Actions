@@ -1,0 +1,39 @@
+name: Deploy Nginx Custom Page
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    name: Deploy via Ansible
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Install Ansible
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y ansible
+
+      - name: Configure SSH
+        run: |
+          mkdir -p ~/.ssh
+          chmod 700 ~/.ssh
+          echo -e "Host *\n\tStrictHostKeyChecking no\n" > ~/.ssh/config
+          chmod 600 ~/.ssh/config
+
+      - name: Setup SSH private key
+        run: |
+          echo "${{ secrets.SSH_KEY64 }}" | base64 -d > mykey.pem
+          chmod 400 mykey.pem
+
+      - name: Deploy using Ansible
+        run: |
+          ansible-playbook -i inventory.yaml playbook-custom.yml \
+            --private-key mykey.pem
+
+

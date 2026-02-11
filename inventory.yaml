@@ -1,0 +1,14 @@
+ec2_nodes:
+  hosts:
+    ser001:
+      ansible_host: 44.200.187.2
+      ansible_port: 22
+      ansible_user: ubuntu
+      # ansible_ssh_private_key_file: ~/pujanSonar.pem
+      ansible_ssh_common_args: '-o StrictHostKeyChecking=no'
+    ser002:
+      ansible_host: 34.229.10.73
+      ansible_port: 22
+      ansible_user: ubuntu
+      # ansible_ssh_private_key_file: ~/pujanSonar.pem
+      ansible_ssh_common_args: '-o StrictHostKeyChecking=no'

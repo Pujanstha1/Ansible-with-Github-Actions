@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ansible CI/CD with GitHub Actions</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #0f172a, #1e293b);
+            color: #f1f5f9;
+        }
+
+        header {
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            background: linear-gradient(90deg, #22d3ee, #6366f1);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        header p {
+            margin-top: 15px;
+            font-size: 1.2rem;
+            color: #cbd5e1;
+        }
+
+        .badge {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 8px 16px;
+            background-color: #16a34a;
+            border-radius: 20px;
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: auto;
+            padding: 40px 20px;
+        }
+
+        .section {
+            margin-bottom: 60px;
+        }
+
+        .section h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            border-left: 5px solid #22d3ee;
+            padding-left: 10px;
+        }
+
+        .workflow {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background-color: #1e293b;
+            padding: 25px;
+            border-radius: 15px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+        }
+
+        .card h3 {
+            margin-bottom: 10px;
+            color: #22d3ee;
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px;
+            border-top: 1px solid #334155;
+            color: #94a3b8;
+        }
+
+        .btn {
+            display: inline-block;
+            margin-top: 25px;
+            padding: 12px 25px;
+            background: #6366f1;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: background 0.3s ease;
+        }
+
+        .btn:hover {
+            background: #4f46e5;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>🚀 Ansible Automation with GitHub Actions</h1>
+    <p>Continuous Deployment powered by Infrastructure as Code</p>
+    <div class="badge">✔ CI/CD Pipeline Active</div>
+</header>
+
+<div class="container">
+
+    <div class="section">
+        <h2>📦 Project Overview</h2>
+        <p>
+            This project demonstrates how Ansible playbooks are automatically executed 
+            using GitHub Actions whenever changes are pushed to the repository. 
+            The CI/CD workflow ensures infrastructure is deployed consistently, 
+            reliably, and securely.
+        </p>
+        <a href="https://github.com/" target="_blank" class="btn">View Repository</a>
+    </div>
+
+    <div class="section">
+        <h2>⚙️ Workflow Process</h2>
+        <div class="workflow">
+            <div class="card">
+                <h3>1️⃣ Code Push</h3>
+                <p>Developer pushes Ansible playbooks or configuration updates to GitHub.</p>
+            </div>
+            <div class="card">
+                <h3>2️⃣ GitHub Actions Trigger</h3>
+                <p>Workflow YAML file automatically triggers the CI pipeline.</p>
+            </div>
+            <div class="card">
+                <h3>3️⃣ Install Dependencies</h3>
+                <p>Runner installs Ansible and required collections/modules.</p>
+            </div>
+            <div class="card">
+                <h3>4️⃣ Execute Playbook</h3>
+                <p>Ansible playbook runs against target infrastructure securely.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>🛠 Tech Stack</h2>
+        <div class="workflow">
+            <div class="card">
+                <h3>Ansible</h3>
+                <p>Infrastructure Automation & Configuration Management</p>
+            </div>
+            <div class="card">
+                <h3>GitHub Actions</h3>
+                <p>CI/CD Pipeline Orchestration</p>
+            </div>
+            <div class="card">
+                <h3>YAML Workflows</h3>
+                <p>Declarative Pipeline Definitions</p>
+            </div>
+            <div class="card">
+                <h3>Cloud / VM</h3>
+                <p>Deployment Target Environment</p>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<footer>
+    © 2026 | DevOps Automation Project | Powered by Ansible & GitHub Actions
+</footer>
+
+</body>
+</html>
