@@ -33,7 +33,7 @@ jobs:
 
       - name: Deploy using Ansible
         run: |
-          ansible-playbook -i inventory.yaml playbook-custom.yml \
+          ansible-playbook -i inventory.yaml playbook-custom.yaml \
             --private-key mykey.pem
 
 
